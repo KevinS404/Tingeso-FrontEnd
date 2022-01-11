@@ -10,9 +10,9 @@ export function Lista({funcionEliminar,datos}) {
             <tr>
               <th>Nombre</th>
               <th>Codigo</th>
-              <th>fecha_vencimiento</th>
-              <th>id_categoria</th>
-              <th>precio</th>
+              <th>Fecha Vencimiento</th>
+              <th>Categoria</th>
+              <th>Precio</th>
             </tr>
           </thead>
           <tbody>

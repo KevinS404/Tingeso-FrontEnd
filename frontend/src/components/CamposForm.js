@@ -5,10 +5,11 @@ const formularioInicial = {
     "nombre":"",
     "codigo":"",
     "fechaVencimiento":"",
-    "id_categoria":"",
+    "categoria":"",
     "precio":"",
 
 }
+
 
 export function CamposForm({funcionAgregar}) {
     
@@ -49,13 +50,14 @@ export function CamposForm({funcionAgregar}) {
                 onChange={Cambio}
                 value={formulario.fechaVencimiento}
             />
-            <input
-                type="number"
-                name="id_categoria"
-                placeholder="Categoria"
-                onChange={Cambio}
-                value={formulario.id_categoria}
-            />
+            
+            <select onClick={Cambio}>
+                    <option value = "Importado">Importado</option>
+                    <option value = "Nacional">Nacional</option>
+                    
+            </select>
+            
+            
             <input
                 type="number"
                 name="precio"
