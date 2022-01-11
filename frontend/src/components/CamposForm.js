@@ -10,7 +10,6 @@ const formularioInicial = {
 
 }
 
-
 export function CamposForm({funcionAgregar}) {
     
     const [formulario, setFormulario] = useState(formularioInicial)
@@ -26,6 +25,7 @@ export function CamposForm({funcionAgregar}) {
             ...formulario,[e.target.name]:e.target.value,
         });
     };
+
     return (
         <>
           <div>
@@ -49,15 +49,11 @@ export function CamposForm({funcionAgregar}) {
                 name="fechaVencimiento"
                 onChange={Cambio}
                 value={formulario.fechaVencimiento}
-            />
-            
-            <select onClick={Cambio}>
-                    <option value = "Importado">Importado</option>
-                    <option value = "Nacional">Nacional</option>
-                    
-            </select>
-            
-            
+            /> 
+            <select name = "categoria" onChange={(e)=>Cambio(e)}>
+                <option value = "Importado">Importado</option>
+                <option value = "Nacional">Nacional</option>
+            </select> 
             <input
                 type="number"
                 name="precio"
