@@ -16,6 +16,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
+        }
         stage('SonarQube analysis'){
             steps {
                 dir('E:/Desktop/ramos/MINGESO/proyecto2/Frontend/Tingeso-FrontEnd'){
@@ -25,7 +26,6 @@ pipeline {
                     }
                 }
             }
-        }
         }
     }
 }
