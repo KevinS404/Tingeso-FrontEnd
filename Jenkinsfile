@@ -21,7 +21,7 @@ pipeline {
             steps {
                 dir("C:/Program Files/Jenkins"){
                     withSonarQubeEnv('sonarqube'){
-                        bat 'pwd'
+
                         bat 'chmod +x ./gradlew'
                         bat './gradlew sonarqube'
                     }
