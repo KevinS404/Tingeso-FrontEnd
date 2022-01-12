@@ -21,7 +21,7 @@ pipeline {
             steps {
                 dir("C:/Program Files/Jenkins"){
                     withSonarQubeEnv('sonarqube'){
-                        def workspace = pwd()
+                        sh 'pwd'
                         sh 'chmod +x ./gradlew'
                         sh './gradlew sonarqube'
                     }
