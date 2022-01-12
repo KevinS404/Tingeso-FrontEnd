@@ -1,6 +1,7 @@
 pipeline {
     agent any
-
+    if (isUnix()) --> sh "command"
+    else --> bat "command"
     stages {
         stage('Build') {
             steps {
@@ -21,9 +22,8 @@ pipeline {
             steps {
                 dir("C:/Program Files/Jenkins"){
                     withSonarQubeEnv('sonarqube'){
-
-                        bat 'chmod +x ./gradlew'
-                        bat './gradlew sonarqube'
+                        sh 'chmod +x ./gradlew'
+                        sh './gradlew sonarqube'
                     }
                 }
             }
