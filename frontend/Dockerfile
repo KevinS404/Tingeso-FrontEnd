@@ -9,8 +9,8 @@ RUN npm install
 COPY . .
 
 # build app for production with minification
-RUN npm run serve
+RUN npm run build
 
 EXPOSE 3000
-CMD ["npm", "run", "serve"]
+CMD ["npm", "start"]
 #CMD ["http-server", "dist" ]
