@@ -38,8 +38,6 @@
     ]
   },
   "devDependencies": {
-    "sonarqube-scanner": "^2.8.1",
-    "serverUrl" : "https://sonarcloud.io/",
-    "token" : "c2e55187d6d408db725404bdd57777be20657ccb"
+    "sonarqube-scanner": "^2.8.1"
   }
 }
