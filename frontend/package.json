@@ -35,5 +35,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sonarqube-scanner": "^2.8.1",
+    "serverUrl" : "https://sonarqube.mycompany.com",
+    "token" : "019d1e2e04eefdcd0caee1468f39a45e69d33d3f"
   }
 }
