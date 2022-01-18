@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sonarqube":"sonar-scanner "
   },
   "eslintConfig": {
     "extends": [
@@ -38,7 +39,7 @@
   },
   "devDependencies": {
     "sonarqube-scanner": "^2.8.1",
-    "serverUrl" : "https://sonarqube.mycompany.com",
-    "token" : "019d1e2e04eefdcd0caee1468f39a45e69d33d3f"
+    "serverUrl" : "https://sonarcloud.io/",
+    "token" : "c2e55187d6d408db725404bdd57777be20657ccb"
   }
 }
