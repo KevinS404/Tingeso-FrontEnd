@@ -27,24 +27,14 @@ pipeline {
                 }
             }
         }
-        /*
+        
         stage('Build-frontend'){
             steps{
-                echo "entre a Build-frontend"
-                dir("/var/lib/jenkins/workspace/Mingeso/Evaluacion2") {
-                    sh "docker build . -t frontimage"
-                    sh "docker tag frontimage belenrickmers/front3"
-                    script {
-                        //front-image = docker.build registry1
-                        docker.withRegistry( '', registryCredential ) {
-                        //frontimage.push()
-                        sh "docker push belenrickmers/front3"
-                        }
-                    }
-                echo "voy a salir de Build-frontend"
+                dir("/var/lib/jenkins/workspace/front/frontend") {
+                    sh "docker build . -t front"
                 }
             }
         }
-        */
+        
     }
 }
