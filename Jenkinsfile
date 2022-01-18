@@ -18,7 +18,7 @@ pipeline {
         }
         stage('SonarQube analysis'){
             steps {
-                dir("/var/lib/jenkins/workspace/Front end/frontend"){
+                dir("/var/lib/jenkins/workspace/front/frontend"){
                     withSonarQubeEnv('sonarqube'){
                         sh 'sonar-scanner'
                     }
