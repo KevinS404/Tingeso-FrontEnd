@@ -20,7 +20,7 @@ pipeline {
             steps {
                 dir("/var/lib/jenkins/workspace/front/frontend"){
                     withSonarQubeEnv('sonarqube'){
-                        sh './npm run sonarqube'
+                        sh 'npm run sonarqube'
                     }
                 }
             }
