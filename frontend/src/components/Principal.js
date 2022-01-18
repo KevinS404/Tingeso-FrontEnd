@@ -11,7 +11,7 @@ export const Principal = () => {
     useEffect(()=> {
        //fetch('http://localhost:8080/Product').then((res)=>res.json()).then((json)=>{setProducto(json)})
        try {
-        axios.get('http://localhost:8080/Product').then(res => {
+        axios.get('http://162.243.163.225:8083/Product').then(res => {
             setProducto(res.data);
             console.log(res.data);
           })
@@ -25,8 +25,7 @@ export const Principal = () => {
     let funcionAgregar = (product) =>{
         console.log(product);
         try {
-            axios.post('http://localhost:8080/newProduct',product).then(res => {
-                console.log("pase");
+            axios.post('http://162.243.163.225:8083/newProduct',product).then(res => {
                 setProducto([...producto,res.data])
                 console.log(producto);
               })
@@ -39,7 +38,7 @@ export const Principal = () => {
     const funcionEliminar = (id) =>{
         
         try {
-            axios.delete(`http://localhost:8080/Product/delete/${id}`).then(res => {
+            axios.delete(`http://162.243.163.225:8083/Product/delete/${id}`).then(res => {
                 let nuevos = producto.filter((product)=>product.id !== id);
                 setProducto(nuevos)
                 console.log(producto);
