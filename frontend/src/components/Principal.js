@@ -24,6 +24,32 @@ export const Principal = () => {
     
     let funcionAgregar = (product) =>{
         console.log(product);
+        if(product.nombre === ""){
+            alert("Falta el nombre del producto");
+            
+            return 0;
+        }
+        
+        if(product.codigo === ""){
+            alert("Falta el codigo del producto");
+           
+            return 0;
+        }
+        if(product.fechaVencimiento === ""){
+            alert("Indicar fecha de vencimiento");
+            
+            return 0;
+        }
+        if(product.categoria === ""){
+            alert("Indicar categoria");
+            
+            return 0;
+        }
+        if(product.precio === "" || product.precio <=0){
+            alert("Error al indicar precio");
+
+            return 0;
+        }
         try {
             axios.post('http://162.243.163.225:8083/newProduct',product).then(res => {
                 setProducto([...producto,res.data])

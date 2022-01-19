@@ -17,7 +17,7 @@ export function CamposForm({funcionAgregar}) {
     let Submit = (e) =>{
         e.preventDefault();
         funcionAgregar(formulario);
-    
+        setFormulario(formularioInicial);
     };
 
     let Cambio = (e) =>{
