@@ -18,7 +18,7 @@ class PruebasSelenium {
     @BeforeEach
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();;
+        driver = new ChromeDriver();
 
     }
     @AfterEach
