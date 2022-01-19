@@ -3,10 +3,8 @@ pipeline {
     stages {
         stage('pull-repositorio'){
             steps{
-                dir('repofront'){
-                    try {
-                        sh 'git pull'
-                    }                    
+                dir('repofront/Tingeso-FrontEnd'){
+                    sh 'git pull'               
                 }
             }
         }
