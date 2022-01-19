@@ -27,7 +27,14 @@ pipeline {
                 }
             }
         }
-        
+        stage('Test selenium'){
+            steps{
+                dir("/var/lib/jenkins/workspace/front/pruebas"){
+                    sh 'chmod +x ./gradlew'
+                    sh './gradlew test'
+                }
+            }
+        }
         stage('Build-frontend'){
             steps{
                 dir("/var/lib/jenkins/workspace/front/frontend") {

@@ -10,7 +10,7 @@ export const Fila = ({funcion,producto}) => {
             <td>{producto.categoria}</td>
             <td>{producto.precio}</td>
             <td>
-                <button onClick={()=>funcion(producto.id)} >Eliminar</button>
+                <button id= {producto.id} onClick={()=>funcion(producto.id)} >Eliminar</button>
             </td>
         </tr>
         </>
