@@ -1,21 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
         stage('SonarQube analysis'){
             steps {
                 dir("/var/lib/jenkins/workspace/front/frontend"){
@@ -31,6 +16,7 @@ pipeline {
             steps{
                 dir("/var/lib/jenkins/workspace/front/pruebas"){
                     sh 'chmod +x ./gradlew'
+                    sh ' ./gradlew dependencies'
                     sh './gradlew test'
                 }
             }
