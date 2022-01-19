@@ -16,7 +16,7 @@ pipeline {
             steps{
                 dir("/var/lib/jenkins/workspace/front/pruebas"){
                     sh 'chmod +x ./gradlew'
-                    sh ' ./gradlew dependencies'
+                    sh './gradlew dependencies'
                     sh './gradlew test'
                 }
             }
