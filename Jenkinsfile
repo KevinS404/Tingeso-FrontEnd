@@ -4,7 +4,8 @@ pipeline {
         stage('pull-repositorio'){
             steps{
                 dir('repofront/Tingeso-FrontEnd'){
-                    sh 'git pull'               
+                    sh 'git pull' 
+                    sh 'kevinS404'              
                 }
             }
         }
