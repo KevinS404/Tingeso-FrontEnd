@@ -4,8 +4,7 @@ pipeline {
         stage('pull-repositorio'){
             steps{
                 dir('repofront/Tingeso-FrontEnd'){
-                    sh 'git pull' 
-                    sh 'kevinS404'              
+                    git branch: 'main', credentialsId: 'GIT', url: 'https://github.com/KevinS404/Tingeso-FrontEnd.git'             
                 }
             }
         }
