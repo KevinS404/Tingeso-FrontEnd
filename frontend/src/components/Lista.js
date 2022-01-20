@@ -4,7 +4,7 @@ import { Fila } from './Fila';
 export function Lista({funcionEliminar,datos}) {
     return (
         <div>
-        <h3>Tabla de Productos</h3>
+        <h3>Tabla de Productos (Enero 2022)</h3>
         <table>
           <thead>
             <tr>
