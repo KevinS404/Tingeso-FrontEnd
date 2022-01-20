@@ -56,11 +56,11 @@ class PruebasSelenium {
         driver.get("http://162.243.163.225:3000/Product");
         driver.manage().window().maximize();
         driver.findElement(By.name("nombre")).click();
-        driver.findElement(By.name("nombre")).sendKeys("test1");
+        driver.findElement(By.name("nombre")).sendKeys("test2");
         driver.findElement(By.name("codigo")).click();
-        driver.findElement(By.name("codigo")).sendKeys("24424");
+        driver.findElement(By.name("codigo")).sendKeys("21eqwew1eqw");
         
-        driver.findElement(By.name("fechaVencimiento")).sendKeys("12");
+        driver.findElement(By.name("fechaVencimiento")).sendKeys("20");
         Thread.sleep(1000);
         driver.findElement(By.name("fechaVencimiento")).sendKeys("11");
         Thread.sleep(1000);
@@ -68,7 +68,7 @@ class PruebasSelenium {
         driver.findElement(By.name("categoria")).click();
         {
         WebElement dropdown = driver.findElement(By.name("categoria"));
-        dropdown.findElement(By.xpath("//option[. = 'Nacional']")).click();
+        dropdown.findElement(By.xpath("//option[. = 'Importado']")).click();
         }
         Thread.sleep(5000);
         driver.findElement(By.cssSelector("input:nth-child(6)")).click();
